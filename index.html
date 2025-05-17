@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess Next Roll!</title>
-    <script src="gnr.js"></script>
-    <link rel="stylesheet" href="gnr.css">
-</head>
-<body>
-    <div>
-        <h1>..GUESS THE ROLL..</h1>
-    </div>
-    <div class="button">
-        <button id="one" onclick="roll(1)">1</button>
-        <button id="two" onclick="roll(2)">2</button>
-        <button id="three" onclick="roll(3)">3</button>
-        <button id="four" onclick="roll(4)">4</button>
-        <button id="five" onclick="roll(5)">5</button>
-        <button id="six" onclick="roll(6)">6</button>
-    </div>
-
-    <div class="display">
-        <p>GUESSED</p>
-        <p id="guessRes">0</p>
-        <img id="guessImg" src="" alt="img">
-    </div>
-
-    <div class="display">
-        <p>ROLLED</p>
-        <p id="rollRes">0</p>
-        <img id="rollImg" src="" alt="img">
-    </div>
-
-    <div class="msg">
-        <p id="rollMsg">ROLL!</p>
-    </div>
-
-    <div class="point">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Roll!</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🎲 Guess The Roll 🎲</h1>
+      <div class="level-select">
+        <label for="level">Level:</label>
+        <select id="level">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <section class="button-group" id="guess-buttons"></section>
+      <section class="results">
+        <div class="display">
+          <p>GUESSED</p>
+          <img id="guessImg" src="" alt="Your guess" />
+          <p id="guessRes">0</p>
+        </div>
+        <div class="display">
+          <p>ROLLED</p>
+          <img id="rollImg" src="" alt="Rolled value" />
+          <p id="rollRes">0</p>
+        </div>
+      </section>
+      <div class="msg">
+        <p id="rollMsg" aria-live="polite">ROLL!</p>
+      </div>
+      <div class="point">
         <p>POINTS</p>
         <p id="points">0</p>
-    </div>
-</body>
+      </div>
+      <button class="reset-btn" id="resetBtn">Reset Game</button>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
 </html>
